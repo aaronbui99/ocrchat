@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Chat with AI</title></head>
+<body>
+  <h2>Chat with AI (PDF Context)</h2>
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="message" placeholder="Ask something..." style="width: 300px;" required>
+    <button type="submit">Send</button>
+  </form>
+
+  {% if response %}
+    <p><strong>AI:</strong> {{ response }}</p>
+  {% endif %}
+</body>
+</html>
