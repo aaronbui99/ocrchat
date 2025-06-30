@@ -25,3 +25,12 @@ You can upload pdf jpeg png.
 After click upload ask the OpenAI. and you will get something like this 
 
 ![alt text](image.png)
+
+# This project belongs to Bui Thanh Huy (Aaron Bui)
+- Email: aaronhuy2509@gmail.com
+- Linkedin: https://www.linkedin.com/in/huy-bui-thanh-372a56194/
+
+# System specs:
+- Python version: 3.13.4
+- Tesseract OCR version: 5.5.0 (20241111)
+- Django version 5.2.3

@@ -16,10 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.upload_file, name='upload'),
     path('chat/', views.chat_view, name='chat'),
+    path('new-chat/', views.new_chat, name='new_chat'),
+    path('switch-conversation/<int:conversation_id>/', views.switch_conversation, name='switch_conversation'),
 ]
+
+# Add media serving in development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
